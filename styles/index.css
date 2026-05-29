@@ -75,6 +75,7 @@ article {
     border-radius: 4px;
     padding: 7px;
     max-width: 950px;
+    width:100%;
 }
 
 article ul {
