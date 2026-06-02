@@ -16,6 +16,13 @@ main {
     margin: auto;
 }
 
+main>* {
+    max-width: 950px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h1,
 h2,
 h3 {
@@ -63,8 +70,6 @@ nav a:visited {
     margin-bottom: 14px;
     padding-left: 14px;
     padding-right: 14px;
-    max-width: 950px;
-    width: 100%;
 }
 
 .tabs-container-list li {
@@ -109,13 +114,9 @@ nav a:visited {
 
 .tabs-panels div {
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--article-fill);
     border-radius: 4px;
     padding: 14px;
-    max-width: 950px;
-    width: 100%;
 }
 
 .tabs-panels div ul {
