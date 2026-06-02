@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',
 
         tabButtons.forEach((tab, index) => {
             if (index === 0) {
-
+                tab.classList.add("active");
             }
             else {
                 tabPanels[index].setAttribute("hidden", "");
