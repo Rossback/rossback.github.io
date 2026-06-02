@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css" />
     <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
     <title>WCAG Standards - SamR</title>
 </head>
 
-<html>
+<html lang="en-US">
 
 <body>
     <header class="title-bar">
@@ -25,70 +26,137 @@
         <div class="info">
             <h2>What is WCAG?</h2>
             <p>
-                WCAG (pronounced wuh-cag) is a set of standards created in order to increase accessibility in online spaces.
+                WCAG (pronounced wuh-cag) is a set of standards created in order to increase accessibility in online
+                spaces.
             </p>
         </div>
-        <article alt="Preface">
-            <h2>Preface</h2>
-            <p>
-                Accessibility online is something that not many people think about until it affects them directly,
-                but once you start diving into ways to make things accessible it becomes hard to not notice.
-                
-                There are many things that people LOVE to have on websites that are really just easier to avoid than to
-                try to implement in a usable, responsive, and accessible way. 
-            </p>
-        </article>
-        <article alt="Images and Videos">
-            <h2>Images and Videos</h2>
-            <h3>Helpful Info</h3>
-            <p>
-                All images and videos must have the alt property with a description of the content represented.
-                Alt text is necessary because it will allow screen-readers to present the information for users
-                that have trouble with sight. Media with audio should have a transcript. Text in videos should meet the
-                same contrast and size standards as the rest of the website, etc.
-            </p>
-            <br>
-            <p>
-                Another helpful tip for images and videos is that setting the width and height can keep the page from
-                moving pieces around as they load. If the height and width are set in the code, the page allocates the
-                space automatically instead of doing it when the media is loaded.
-            </p>
-            <br>
-            <p>Example:</p>
-            <img style="padding-top:4px;" width="300" src="media/materandtheghostlightimagepixar.jpg" alt="An image depicting Mater from Cars in the middle of the night, worried, with a lantern in front of him.">
-            <br>
-            <video controls width="300" src="media/ghostLight.mp4" alt="The full video of Mater and the Ghost Light from Maters Tall Tales"></video>
-            <p>For a transcript of the video, please visit <a href="https://movies.fandom.com/wiki/Mater_and_the_Ghostlight/Transcript" target="_blank">this link</a></p>
-        </article>
-        <article alt="Lists">
-            <h2>Lists</h2>
-            <p>Lists include html tags like ordered (ol), unordered (ul), and definition (dl) lists.</p>
-            <h3>Helpful Info</h3>
-            <p>Lists should represent data in a way that makes sense. Formatting something as a list when it isn't one can make things hard to read and understand.</p>
-        </article>
-        <article alt="Hyperlinks">
-            <h2>Hyperlinks</h2>
-            <h3>Helpful Info</h3>
-            <p>Users clicking a hyperlink should know what the button click is going to do before they click it. You <a href="https://youtu.be/dQw4w9WgXcQ?si=AD4lOFhThRk0-AYl" target="_blank">shouldn't</a> just have a hyperlink for no reason, like this one which will rick roll you.</p>
-        </article>
-        <article alt="Fonts">
-            <h2>Font</h2>
-            <h3>Helpful Info</h3>
-            <p>Fonts should be simple. Sans-serif, not overly decorative, and should be at least 3/16 inch high based on the letter "I" (capital i). Verdana, the font used on this page, is a good font for this! Another benefit of the font is that it has a clear difference between lower case i, capital I, and lower case L.</p>
-        </article>
-        <article alt="Tables">
-            <h2>Tables</h2>
-            <h3>Helpful Info</h3>
-            <p></p>
-        </article>
-        <article>
-            <h2>Colors and Contrast</h2>
-            <h3>Helpful Info</h3>
-            <p></p>
-        </article>
+        <div class="tabs-container">
+            <ul class="tabs-container-list">
+                <li><a id="tab-1" href="#Preface">Preface</a></li>
+                <li><a id="tab-2" href="#Tips">Tips</a></li>
+                <li><a id="tab-3" href="#ImagesAndVideos">Images And Videos</a></li>
+                <li><a id="tab-4" href="#Lists">Lists</a></li>
+                <li><a id="tab-5" href="#Hyperlinks">Hyperlinks</a></li>
+                <li><a id="tab-6" href="#Fonts">Fonts</a></li>
+                <li><a id="tab-7" href="#ColorsAndContrast">Colors And Contrast</a></li>
+            </ul>
+            <div class="tabs-panels flow">
+                <div id="Preface" aria-labelledby="tab-1">
+                    <h2>Preface</h2>
+                    <p>
+                        Accessibility online is something that not many people think about until it affects them
+                        directly,
+                        but once you start diving into ways to make things accessible it becomes hard to not notice.
+
+                        There are many things that people LOVE to have on websites that are really just easier to avoid
+                        than
+                        to
+                        try to implement in a usable, responsive, and accessible way. I'm sure you could make a table
+                        using
+                        css,
+
+                    </p>
+                </div>
+                <div id="Tips" aria-labelledby="tab-2">
+                    <h2>General Tips</h2>
+                    <p>
+                        There are a lot of tags within HTML, and some of them are more useful than others. A good
+                        general
+                        rule
+                        that I've found over my years in college has been to stop before you make something from scratch
+                        and
+                        look up if there's a tag for it already. Something like "article" or "main" can save some time
+                        creating
+                        and formatting a custom div.
+                        <br><br>
+                        An example of this could be trying to create a table using css because you don't know the table
+                        tag
+                        exists.
+                        Sure, it's possible, but it would be impossible for a screen reader to recognize it.
+                        <br><br>
+                        A perhaps more applicable example of this would be to just use h1, h2, h3 instead of adapting a
+                        font using classes and css. There's not any reason to create ".header1" since it's there and
+                        extremely recognizable by browsers and screen readers.
+                    </p>
+                </div>
+                <div id="ImagesAndVideos" aria-labelledby="tab-3">
+                    <h2>Images and Videos</h2>
+                    <h3>Helpful Info</h3>
+                    <p>
+                        All images and videos must have the alt property with a description of the content represented.
+                        Alt text is necessary because it will allow screen-readers to present the information for users
+                        that have trouble with sight. Media with audio should have a transcript. Text in videos should
+                        meet
+                        the
+                        same contrast and size standards as the rest of the website, etc.
+                    </p>
+                    <br>
+                    <p>
+                        Another helpful tip for images and videos is that setting the width and height can keep the page
+                        from
+                        moving pieces around as they load. If the height and width are set in the code, the page
+                        allocates
+                        the
+                        space automatically instead of doing it when the media is loaded.
+                    </p>
+                    <br>
+                    <p>Example:</p>
+                    <img style="padding-top:4px;" width="300" src="media/materandtheghostlightimagepixar.jpg"
+                        alt="An image depicting Mater from Cars in the middle of the night, worried, with a lantern in front of him.">
+                    <br>
+                    <video controls width="300" src="media/ghostLight.mp4"
+                        alt="The full video of Mater and the Ghost Light from Maters Tall Tales"></video>
+                    <p>For a transcript of the video, please visit <a
+                            href="https://movies.fandom.com/wiki/Mater_and_the_Ghostlight/Transcript"
+                            target="_blank">this
+                            link</a></p>
+                </div>
+                <div id="Lists" aria-labelledby="tab-4">
+                    <h2>Lists</h2>
+                    <p>Lists include html tags like ordered (ol), unordered (ul), and definition (dl) lists.</p>
+                    <br>
+                    <h3>Helpful Info</h3>
+                    <p>Lists should represent data in a way that makes sense. Formatting something as a list when it
+                        isn't
+                        one
+                        can make things hard to read and understand.</p>
+                </div>
+                <div id="Hyperlinks" aria-labelledby="tab-5">
+                    <h2>Hyperlinks</h2>
+                    <h3>Helpful Info</h3>
+                    <p>Users clicking a hyperlink should know what the button click is going to do before they click it.
+                        You
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=AD4lOFhThRk0-AYl" target="_blank">shouldn't</a> just
+                        have a
+                        hyperlink for no reason, like this one which will rick roll you. Technically this violates some
+                        of
+                        the
+                        guidelines but I think it's a good enough example that it will work.
+                    </p>
+                </div>
+                <div id="Fonts" aria-labelledby="tab-6">
+                    <h2>Fonts</h2>
+                    <h3>Helpful Info</h3>
+                    <p>Fonts should be simple. Sans-serif, not overly decorative, and should be at least 3/16 inch high
+                        based on
+                        the letter "I" (capital i). Verdana, the font used on this page, is a good font for this!
+                        Another
+                        benefit of the font is that it has a clear difference between lower case i, capital I, and lower
+                        case L.
+                    </p>
+                </div>
+                <div id="ColorsAndContrast" aria-labelledby="tab-7">
+                    <h2>Colors and Contrast</h2>
+                    <h3>Helpful Info</h3>
+                    <p>Some text</p>
+                </div>
+            </div>
+        </div>
         <footer>
             <br>
-            <p class="body-text"></p>No AI was used in the creation of any part of this project.</p>
+            <p class="body-text"></p>No AI was used in the creation of any part of this project.<br>Credit for
+            accessible
+            tab system goes to Kevin Powell on Youtube.</p>
             <br>
         </footer>
     </main>

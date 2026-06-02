@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:verdana;
+    font-family: verdana;
 }
 
 body {
@@ -51,6 +51,41 @@ nav a:visited {
     color: var(--primary-title-text);
 }
 
+.tabs-container-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-bottom: 3px solid var(--accent-blue);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 100%;
+}
+
+.tabs-container-list li {
+    margin: 7px;
+}
+
+.tabs-container-list a {
+    color: var(--primary-body-text);
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.tabs-container-list a:visited {
+    color: var(--primary-body-text);
+}
+
+.tabs-container-list li:hover>* {
+    background-color: var(--accent-blue);
+    color: var(--primary-title-text);
+}
+
 .title-bar {
     background-color: var(--primary-blue);
     padding: 10px;
@@ -59,41 +94,45 @@ nav a:visited {
 
 .title-text {
     color: var(--primary-title-text);
-    margin:auto;
-    max-width:700px;
+    margin: auto;
+    max-width: 700px;
 }
 
 .active {
     background-color: var(--accent-blue);
 }
 
-article {
-    margin-top: 10px;
-    margin-left:auto;
-    margin-right:auto;
-    background-color: var(--article-fill);
-    border-radius: 4px;
-    padding: 7px;
-    max-width: 950px;
-    width:100%;
+.tabs-container-list li .active {
+    color: var(--primary-title-text);
 }
 
-article ul {
+.tabs-panels div {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--article-fill);
+    border-radius: 4px;
+    padding: 14px;
+    max-width: 950px;
+    width: 100%;
+}
+
+.tabs-panels div ul {
     list-style: none;
 }
 
-article header {
+.tabs-panels div header {
     color: var(--primary-body-text);
 }
 
-article p {
+.tabs-panels div p {
     color: var(--primary-body-text);
 }
 
 .info {
     text-align: center;
     margin: 15px auto 15px auto;
-    text-wrap:balance;
+    text-wrap: balance;
 }
 
 :root {
